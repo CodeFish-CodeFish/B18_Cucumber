@@ -1,0 +1,83 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-12-03T19:05:01.046Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2117314000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.lambda.step_definitions.LambdaHook.setDriver()"
+            }
+          }
+        ],
+        "line": 2,
+        "name": "Validate age is more than thirty and up",
+        "description": "",
+        "id": "age-functionality;validate-age-is-more-than-thirty-and-up",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 16466000,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "User is on main page of lambda",
+            "match": {
+              "location": "com.lambda.step_definitions.LambdaSteps.user_is_on_main_page_of_lambda()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 240451000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User clicks on table sorting link",
+            "match": {
+              "location": "com.lambda.step_definitions.LambdaSteps.user_clicks_on_table_sorting_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 25726045000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User validates that there are ages thirty and up",
+            "match": {
+              "location": "com.lambda.step_definitions.LambdaSteps.user_validates_that_there_are_ages_thirty_and_up()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2127482000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User closes the window",
+            "match": {
+              "location": "com.lambda.step_definitions.LambdaSteps.user_closes_the_window()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Age functionality",
+    "description": "",
+    "id": "age-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/lambda/lambdaAge.feature",
+    "tags": []
+  }
+]
