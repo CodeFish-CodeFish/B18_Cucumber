@@ -3,81 +3,199 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-12-03T19:05:01.046Z",
+        "start_timestamp": "2023-12-06T02:04:12.995Z",
         "before": [
           {
             "result": {
-              "duration": 2117314000,
+              "duration": 2112159000,
               "status": "passed"
             },
             "match": {
-              "location": "com.lambda.step_definitions.LambdaHook.setDriver()"
+              "location": "com.smart_bear.steps.SmartBearHook.setDriver()"
             }
           }
         ],
-        "line": 2,
-        "name": "Validate age is more than thirty and up",
+        "line": 3,
+        "name": "Positive scenario to create order functionality",
         "description": "",
-        "id": "age-functionality;validate-age-is-more-than-thirty-and-up",
+        "id": "web-order-functionality;positive-scenario-to-create-order-functionality",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 16466000,
-              "status": "passed"
-            },
-            "line": 3,
-            "name": "User is on main page of lambda",
-            "match": {
-              "location": "com.lambda.step_definitions.LambdaSteps.user_is_on_main_page_of_lambda()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 240451000,
+              "duration": 1370569000,
               "status": "passed"
             },
             "line": 4,
-            "name": "User clicks on table sorting link",
+            "name": "user is on login page user provides \u0027Tester\u0027 for username and \u0027test\u0027 for password clicks on loginBtn",
             "match": {
-              "location": "com.lambda.step_definitions.LambdaSteps.user_clicks_on_table_sorting_link()"
+              "arguments": [
+                {
+                  "val": "\u0027Tester\u0027",
+                  "offset": 36
+                },
+                {
+                  "val": "\u0027test\u0027",
+                  "offset": 62
+                }
+              ],
+              "location": "com.smart_bear.steps.SmartBearStepDef.user_is_on_login_page_user_provides_for_username_and_for_password_clicks_on_login_btn(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 251926000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user chooses \u0027ScreenSaver\u0027 from the dropdown and provide quantity as \u002710\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027ScreenSaver\u0027",
+                  "offset": 13
+                },
+                {
+                  "val": "\u002710\u0027",
+                  "offset": 69
+                }
+              ],
+              "location": "com.smart_bear.steps.SmartBearStepDef.user_chooses_from_the_dropdown_and_provide_quantity_as(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 25726045000,
+              "duration": 73743000,
               "status": "passed"
             },
-            "line": 5,
-            "name": "User validates that there are ages thirty and up",
+            "line": 6,
+            "name": "user provides price as 10 and discount as 20",
             "match": {
-              "location": "com.lambda.step_definitions.LambdaSteps.user_validates_that_there_are_ages_thirty_and_up()"
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 23
+                },
+                {
+                  "val": "20",
+                  "offset": 42
+                }
+              ],
+              "location": "com.smart_bear.steps.SmartBearStepDef.user_provides_price_as_and_discount_as(java.lang.Integer,java.lang.Integer)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2127482000,
+              "duration": 29845000,
               "status": "passed"
             },
-            "line": 6,
-            "name": "User closes the window",
+            "line": 7,
+            "name": "user provides total number as \u0027100\u0027",
             "match": {
-              "location": "com.lambda.step_definitions.LambdaSteps.user_closes_the_window()"
+              "arguments": [
+                {
+                  "val": "\u0027100\u0027",
+                  "offset": 30
+                }
+              ],
+              "location": "com.smart_bear.steps.SmartBearStepDef.user_provides_total_number_as(java.lang.String)"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 56105000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user enters their name as \u0027Kuba Abdy\u0027 and street address as \u0027River Rd 60656\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Kuba Abdy\u0027",
+                  "offset": 26
+                },
+                {
+                  "val": "\u0027River Rd 60656\u0027",
+                  "offset": 60
+                }
+              ],
+              "location": "com.smart_bear.steps.SmartBearStepDef.user_enters_their_name_as_and_street_address_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 82365000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user enters city as \u0027Chitown\u0027 and state as \u0027Oshington\u0027 and zip as \u002760656\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Chitown\u0027",
+                  "offset": 20
+                },
+                {
+                  "val": "\u0027Oshington\u0027",
+                  "offset": 43
+                },
+                {
+                  "val": "\u002760656\u0027",
+                  "offset": 66
+                }
+              ],
+              "location": "com.smart_bear.steps.SmartBearStepDef.user_enters_city_as_and_state_as_and_zip_as(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 79000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user clicks on visa and provides card number as \u0027123456789\u0027 and expiration as \u002710/28\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027123456789\u0027",
+                  "offset": 48
+                },
+                {
+                  "val": "\u002710/28\u0027",
+                  "offset": 78
+                }
+              ],
+              "location": "com.smart_bear.steps.SmartBearStepDef.user_clicks_on_visa_and_provides_card_number_as_and_expiration_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 102530000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user finally clicks on process button",
+            "match": {
+              "location": "com.smart_bear.steps.SmartBearStepDef.user_finally_clicks_on_process_button()"
+            },
+            "keyword": "And "
           }
         ]
       }
     ],
-    "name": "Age functionality",
+    "name": "Web Order Functionality",
     "description": "",
-    "id": "age-functionality",
+    "id": "web-order-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/lambda/lambdaAge.feature",
+    "uri": "file:src/test/resources/smartBear/smartBear.feature",
     "tags": []
   }
 ]

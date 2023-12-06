@@ -1,14 +1,15 @@
 package com.lambda.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.BrowserUtils;
 
-import java.util.HashMap;
+import java.awt.*;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
 
 public class SortPage {
 
@@ -30,6 +31,12 @@ public class SortPage {
     @FindBy(css = "#example_next")
     WebElement nextBtn;
 
+    @FindBy(xpath = "//tr//td[1]")
+    List<WebElement> names;
+
+    @FindBy(xpath = "//th[.='Name']")
+    WebElement nameColumn;
+
 
     public void validateAge() throws InterruptedException {
 
@@ -38,15 +45,15 @@ public class SortPage {
 
         for (int i = 0; i < ages.size(); i++) {
 
-            if (Integer.parseInt(BrowserUtils.getText(ages.get(i))) > 10){
-                String nameAndPosition = allNames.get(i).getText() + "-"+allPositions.get(i).getText();
+            if (Integer.parseInt(BrowserUtils.getText(ages.get(i))) > 10) {
+                String nameAndPosition = allNames.get(i).getText() + "-" + allPositions.get(i).getText();
                 map.put(nameAndPosition, ages.get(i).getText());
                 Thread.sleep(1000);
             }
 
 
             count++;
-            if (count == 10){
+            if (count == 10) {
                 nextBtn.click();
                 count = 0;
                 i = -1;
@@ -57,6 +64,50 @@ public class SortPage {
         System.out.println(map.size());
     }
 
+    public void clickOnNameColumn(){
+        BrowserUtils.clickOnElement(nameColumn);
+    }
+
+    public void checkAscendingOrder(){
+
+        List<Character> actualLetters = new ArrayList<>();
+        List<Character> expectedLetters = new ArrayList<>();
+
+        for (int i = 0; i < names.size(); i++) {
+
+            actualLetters.add(BrowserUtils.getText(names.get(i)).charAt(0));
+            expectedLetters.add(BrowserUtils.getText(names.get(i)).charAt(0));
+
+            Collections.sort(expectedLetters); //
+            Assert.assertEquals(actualLetters, expectedLetters);
+
+
+        }
+
+    }
+
+
+    public void checkDescendingOrder(){
+
+        clickOnNameColumn();
+
+        List<Character> actualLetters = new ArrayList<>();
+        List<Character> expectedLetters = new ArrayList<>();
+
+        for (int i = 0; i < names.size(); i++) {
+
+            actualLetters.add(BrowserUtils.getText(names.get(i)).charAt(0));
+            expectedLetters.add(BrowserUtils.getText(names.get(i)).charAt(0));
+
+            Collections.sort(expectedLetters);
+            Collections.reverse(expectedLetters);//
+            Assert.assertEquals(expectedLetters, actualLetters);
+
+
+        }
+
+
+    }
 
 
 }
