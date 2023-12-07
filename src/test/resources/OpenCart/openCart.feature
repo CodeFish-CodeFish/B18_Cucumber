@@ -13,7 +13,7 @@ Feature: login functionality
 
    Scenario: Check one record and comment in the box
      Then user scrolls down and clicks on record from the table
-     And user comments in the box as 'test test test' and clicks add to history button
+     And user comments in the box as 'Your record needs attention' and clicks add to history button
 
 
 

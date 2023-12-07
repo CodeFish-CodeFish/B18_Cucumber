@@ -26,8 +26,11 @@ public class OpenCartLoginPage {
 
         this.username.sendKeys(username);
         this.password.sendKeys(password);
-        loginBtn.click();
 
+    }
+
+    public void clickOnLogin(){
+        loginBtn.click();
     }
 
 }

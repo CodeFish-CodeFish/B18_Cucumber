@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 5, 2023 08:04:12 PM</span></a>
+<a href="#"><span class="badge badge-primary">Dec 6, 2023 06:57:41 PM</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Web Order Functionality</p>
+            <p class="name">login functionality</p>
             <p class="text-sm">
-              <span>8:04:13 PM</span> / <span>00:00:04:177</span>
+              <span>6:57:41 PM</span> / <span>00:00:09:815</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Web Order Functionality</h5>
-<span class='badge badge-success'>12.05.2023 8:04:13 PM</span>
-<span class='badge badge-danger'>12.05.2023 8:04:17 PM</span>
-<span class='badge badge-default'>00:00:04:177</span>
+<h5 class="test-status text-pass">login functionality</h5>
+<span class='badge badge-success'>12.06.2023 6:57:41 PM</span>
+<span class='badge badge-danger'>12.06.2023 6:57:51 PM</span>
+<span class='badge badge-default'>00:00:09:815</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -104,48 +104,79 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Positive scenario to create order functionality</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Check status column values are displayed</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="com.smart_bear.steps.SmartBearStepDef.user_is_on_login_page_user_provides_for_username_and_for_password_clicks_on_login_btn(java.lang.String,java.lang.String)">
-                <span>When user is on login page user provides 'Tester' for username and 'test' for password clicks on loginBtn</span>
+              <div class="step pass-bg" title="com.open_cart.step_definitions.Authentication.user_is_on_login_page_user_validates_title_is(java.lang.String)">
+                <span>When user is on login page user validates title is 'Administration'</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.smart_bear.steps.SmartBearStepDef.user_chooses_from_the_dropdown_and_provide_quantity_as(java.lang.String,java.lang.String)">
-                <span>Then user chooses 'ScreenSaver' from the dropdown and provide quantity as '10'</span>
+              <div class="step pass-bg" title="com.open_cart.step_definitions.Authentication.user_provides_username_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>Then user provides username as 'demo' and password as 'demo'</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.smart_bear.steps.SmartBearStepDef.user_provides_price_as_and_discount_as(java.lang.Integer,java.lang.Integer)">
-                <span>And user provides price as 10 and discount as 20</span>
+              <div class="step pass-bg" title="com.open_cart.step_definitions.Authentication.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.smart_bear.steps.SmartBearStepDef.user_provides_total_number_as(java.lang.String)">
-                <span>Then user provides total number as '100'</span>
+              <div class="step pass-bg" title="com.open_cart.step_definitions.Authentication.user_is_mainpage_user_clicks_on_x_button_to_close_popup()">
+                <span>When user is mainpage user clicks on x button to close popup</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.smart_bear.steps.SmartBearStepDef.user_enters_their_name_as_and_street_address_as(java.lang.String,java.lang.String)">
-                <span>And user enters their name as 'Kuba Abdy' and street address as 'River Rd 60656'</span>
+              <div class="step pass-bg" title="com.open_cart.step_definitions.OpenCartSteps.user_scrolls_down_and_validates_all_status_column_values_are_displayed()">
+                <span>Then user scrolls down and validates all status column values are displayed</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.smart_bear.steps.SmartBearStepDef.user_enters_city_as_and_state_as_and_zip_as(java.lang.String,java.lang.String,java.lang.String)">
-                <span>Then user enters city as 'Chitown' and state as 'Oshington' and zip as '60656'</span>
+              <div class="step pass-bg" title="com.open_cart.step_definitions.OpenCartSteps.user_validates_dates_column_values_are_displayed()">
+                <span>And user validates dates column values are displayed</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.smart_bear.steps.SmartBearStepDef.user_clicks_on_visa_and_provides_card_number_as_and_expiration_as(java.lang.String,java.lang.String)">
-                <span>And user clicks on visa and provides card number as '123456789' and expiration as '10/28'</span>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>Check one record and comment in the box</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.open_cart.step_definitions.Authentication.user_is_on_login_page_user_validates_title_is(java.lang.String)">
+                <span>When user is on login page user validates title is 'Administration'</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.smart_bear.steps.SmartBearStepDef.user_finally_clicks_on_process_button()">
-                <span>And user finally clicks on process button</span>
+              <div class="step pass-bg" title="com.open_cart.step_definitions.Authentication.user_provides_username_as_and_password_as(java.lang.String,java.lang.String)">
+                <span>Then user provides username as 'demo' and password as 'demo'</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.open_cart.step_definitions.Authentication.user_clicks_on_login_button()">
+                <span>And user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.open_cart.step_definitions.Authentication.user_is_mainpage_user_clicks_on_x_button_to_close_popup()">
+                <span>When user is mainpage user clicks on x button to close popup</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.open_cart.step_definitions.OpenCartSteps.user_scrolls_down_and_clicks_on_record_from_the_table()">
+                <span>Then user scrolls down and clicks on record from the table</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.open_cart.step_definitions.OpenCartSteps.user_comments_in_the_box_as_and_clicks_add_to_history_button(java.lang.String)">
+                <span>And user comments in the box as 'Your record needs attention' and clicks add to history button</span>
       <div>
       </div>
               </div>
@@ -169,13 +200,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 5, 2023 08:04:12 PM</h3>
+<h3>Dec 6, 2023 06:57:41 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 5, 2023 08:04:17 PM</h3>
+<h3>Dec 6, 2023 06:57:51 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -226,7 +257,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>2</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -246,7 +277,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>8</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>12</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -265,7 +296,7 @@
 </div></div>
 <script>
 var timeline = {
-"Web Order Functionality":4.177
+"login functionality":9.815
 };
 </script>
 <div class="row">
@@ -279,13 +310,13 @@ failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 1,
+passChild: 2,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 8,
+passGrandChild: 12,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,

@@ -3,199 +3,255 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-12-06T02:04:12.995Z",
-        "before": [
-          {
-            "result": {
-              "duration": 2112159000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.smart_bear.steps.SmartBearHook.setDriver()"
-            }
-          }
-        ],
         "line": 3,
-        "name": "Positive scenario to create order functionality",
+        "name": "login process",
         "description": "",
-        "id": "web-order-functionality;positive-scenario-to-create-order-functionality",
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 1370569000,
+              "duration": 16981000,
               "status": "passed"
             },
             "line": 4,
-            "name": "user is on login page user provides \u0027Tester\u0027 for username and \u0027test\u0027 for password clicks on loginBtn",
+            "name": "user is on login page user validates title is \u0027Administration\u0027",
             "match": {
               "arguments": [
                 {
-                  "val": "\u0027Tester\u0027",
-                  "offset": 36
-                },
-                {
-                  "val": "\u0027test\u0027",
-                  "offset": 62
+                  "val": "\u0027Administration\u0027",
+                  "offset": 46
                 }
               ],
-              "location": "com.smart_bear.steps.SmartBearStepDef.user_is_on_login_page_user_provides_for_username_and_for_password_clicks_on_login_btn(java.lang.String,java.lang.String)"
+              "location": "com.open_cart.step_definitions.Authentication.user_is_on_login_page_user_validates_title_is(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 251926000,
+              "duration": 90917000,
               "status": "passed"
             },
             "line": 5,
-            "name": "user chooses \u0027ScreenSaver\u0027 from the dropdown and provide quantity as \u002710\u0027",
+            "name": "user provides username as \u0027demo\u0027 and password as \u0027demo\u0027",
             "match": {
               "arguments": [
                 {
-                  "val": "\u0027ScreenSaver\u0027",
-                  "offset": 13
-                },
-                {
-                  "val": "\u002710\u0027",
-                  "offset": 69
-                }
-              ],
-              "location": "com.smart_bear.steps.SmartBearStepDef.user_chooses_from_the_dropdown_and_provide_quantity_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 73743000,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "user provides price as 10 and discount as 20",
-            "match": {
-              "arguments": [
-                {
-                  "val": "10",
-                  "offset": 23
-                },
-                {
-                  "val": "20",
-                  "offset": 42
-                }
-              ],
-              "location": "com.smart_bear.steps.SmartBearStepDef.user_provides_price_as_and_discount_as(java.lang.Integer,java.lang.Integer)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 29845000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user provides total number as \u0027100\u0027",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\u0027100\u0027",
-                  "offset": 30
-                }
-              ],
-              "location": "com.smart_bear.steps.SmartBearStepDef.user_provides_total_number_as(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 56105000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "user enters their name as \u0027Kuba Abdy\u0027 and street address as \u0027River Rd 60656\u0027",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\u0027Kuba Abdy\u0027",
+                  "val": "\u0027demo\u0027",
                   "offset": 26
                 },
                 {
-                  "val": "\u0027River Rd 60656\u0027",
-                  "offset": 60
+                  "val": "\u0027demo\u0027",
+                  "offset": 49
                 }
               ],
-              "location": "com.smart_bear.steps.SmartBearStepDef.user_enters_their_name_as_and_street_address_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 82365000,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user enters city as \u0027Chitown\u0027 and state as \u0027Oshington\u0027 and zip as \u002760656\u0027",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\u0027Chitown\u0027",
-                  "offset": 20
-                },
-                {
-                  "val": "\u0027Oshington\u0027",
-                  "offset": 43
-                },
-                {
-                  "val": "\u002760656\u0027",
-                  "offset": 66
-                }
-              ],
-              "location": "com.smart_bear.steps.SmartBearStepDef.user_enters_city_as_and_state_as_and_zip_as(java.lang.String,java.lang.String,java.lang.String)"
+              "location": "com.open_cart.step_definitions.Authentication.user_provides_username_as_and_password_as(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 79000000,
+              "duration": 31011000,
               "status": "passed"
             },
-            "line": 10,
-            "name": "user clicks on visa and provides card number as \u0027123456789\u0027 and expiration as \u002710/28\u0027",
+            "line": 6,
+            "name": "user clicks on login button",
             "match": {
-              "arguments": [
-                {
-                  "val": "\u0027123456789\u0027",
-                  "offset": 48
-                },
-                {
-                  "val": "\u002710/28\u0027",
-                  "offset": 78
-                }
-              ],
-              "location": "com.smart_bear.steps.SmartBearStepDef.user_clicks_on_visa_and_provides_card_number_as_and_expiration_as(java.lang.String,java.lang.String)"
+              "location": "com.open_cart.step_definitions.Authentication.user_clicks_on_login_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 102530000,
+              "duration": 514439000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user is mainpage user clicks on x button to close popup",
+            "match": {
+              "location": "com.open_cart.step_definitions.Authentication.user_is_mainpage_user_clicks_on_x_button_to_close_popup()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-12-07T00:57:41.715Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2896798000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.open_cart.step_definitions.OpenCartHook.setDriver()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Check status column values are displayed",
+        "description": "",
+        "id": "login-functionality;check-status-column-values-are-displayed",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1143361000,
               "status": "passed"
             },
             "line": 11,
-            "name": "user finally clicks on process button",
+            "name": "user scrolls down and validates all status column values are displayed",
             "match": {
-              "location": "com.smart_bear.steps.SmartBearStepDef.user_finally_clicks_on_process_button()"
+              "location": "com.open_cart.step_definitions.OpenCartSteps.user_scrolls_down_and_validates_all_status_column_values_are_displayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1110182000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user validates dates column values are displayed",
+            "match": {
+              "location": "com.open_cart.step_definitions.OpenCartSteps.user_validates_dates_column_values_are_displayed()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "login process",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4238000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user is on login page user validates title is \u0027Administration\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Administration\u0027",
+                  "offset": 46
+                }
+              ],
+              "location": "com.open_cart.step_definitions.Authentication.user_is_on_login_page_user_validates_title_is(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 54058000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user provides username as \u0027demo\u0027 and password as \u0027demo\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027demo\u0027",
+                  "offset": 26
+                },
+                {
+                  "val": "\u0027demo\u0027",
+                  "offset": 49
+                }
+              ],
+              "location": "com.open_cart.step_definitions.Authentication.user_provides_username_as_and_password_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 22978000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "com.open_cart.step_definitions.Authentication.user_clicks_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 652426000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user is mainpage user clicks on x button to close popup",
+            "match": {
+              "location": "com.open_cart.step_definitions.Authentication.user_is_mainpage_user_clicks_on_x_button_to_close_popup()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-12-07T00:57:47.591Z",
+        "before": [
+          {
+            "result": {
+              "duration": 160867000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.open_cart.step_definitions.OpenCartHook.setDriver()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Check one record and comment in the box",
+        "description": "",
+        "id": "login-functionality;check-one-record-and-comment-in-the-box",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1743691000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user scrolls down and clicks on record from the table",
+            "match": {
+              "location": "com.open_cart.step_definitions.OpenCartSteps.user_scrolls_down_and_clicks_on_record_from_the_table()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1352613000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user comments in the box as \u0027Your record needs attention\u0027 and clicks add to history button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Your record needs attention\u0027",
+                  "offset": 28
+                }
+              ],
+              "location": "com.open_cart.step_definitions.OpenCartSteps.user_comments_in_the_box_as_and_clicks_add_to_history_button(java.lang.String)"
             },
             "keyword": "And "
           }
         ]
       }
     ],
-    "name": "Web Order Functionality",
+    "name": "login functionality",
     "description": "",
-    "id": "web-order-functionality",
+    "id": "login-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/smartBear/smartBear.feature",
+    "uri": "file:src/test/resources/OpenCart/openCart.feature",
     "tags": []
   }
 ]

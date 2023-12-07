@@ -49,8 +49,8 @@ public class OpenCartMainPage {
 
     }
 
-    public void clickOnRecord(){
-
+    public void clickOnRecord(WebDriver driver){
+        BrowserUtils.scrollByAmount(driver, 1000, 1000);
         for (int i = 0; i < allRecords.size(); i++) {
 
             if (allRecords.get(i).getAttribute("href").contains("2412")){
