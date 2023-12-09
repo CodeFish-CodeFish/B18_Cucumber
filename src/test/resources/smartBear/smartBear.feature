@@ -25,21 +25,7 @@ Feature: Web Order Functionality
       | Tester   | test     | ScreenSaver | 200      | 55    | Kuan Abdy   | River Rd     | Chitown       | Oshington  | 60659   | 5654654654654 | 12/99      |
       | Tester   | test     | FamilyAlbum | 1        | 99    | Rambo       | Dearborn st  | Chicago       | Illinois   | 60625   | 87987979879   | 12/29      |
       | Tester   | test     | MyMoney     | 55       | 32    | Jackie Chan | W Adams      | LA            | California | 1212121 | 546978213213  | 12/66      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
-      | Tester   | test     | ScreenSaver | 100      | 22    | Bruce Lee   | Michigan Ave | San Francisco | California | 60656   | 12321321321   | 12/25      |
+
 
 
 
