@@ -8,13 +8,11 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-        features = "src/test/resources/webOrder",
+        features = "@target/uiFailedTests.txt", // this path is for failed tests
         glue = "com/web_order/steps",
         dryRun = false,
         plugin = {"pretty", "html:target/uiReport.html", "rerun:target/uiFailedTests.txt"}
 
-        // this plugin is regular cucumber report generator that will generate a report inside target fodler
-
 )
-public class WebOrderRunner {
+public class WebOrderReRunner {
 }

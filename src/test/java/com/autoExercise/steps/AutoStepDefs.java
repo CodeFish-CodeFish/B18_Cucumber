@@ -9,6 +9,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import utils.BrowserUtils;
+import utils.ConfigReader;
 import utils.DriverHelper;
 
 public class AutoStepDefs {
@@ -24,7 +25,7 @@ public class AutoStepDefs {
     @Given("user is on main page and provides username and email and clicks signUp")
     public void user_is_on_main_page_and_provides_username_and_email_and_clicks_sign_up() {
         mainPageAuto.clickOnSignUpLink();
-        loginPageAuto.setSignUpBtn("TEST", "ii@ii.io");
+        loginPageAuto.setSignUpBtn(ConfigReader.readProperty("autoUserName"), ConfigReader.readProperty("autoEmail"));
     }
     @When("user is sign up page user verifies that user is on sign up page")
     public void user_is_sign_up_page_user_verifies_that_user_is_on_sign_up_page() {
