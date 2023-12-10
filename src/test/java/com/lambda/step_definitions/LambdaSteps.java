@@ -48,7 +48,7 @@ public class LambdaSteps {
     }
     @Then("user validates that names are in descending order")
     public void user_validates_that_names_are_in_descending_order() {
-        sortPage.checkDescendingOrder();
+        sortPage.checkDescendingOrder(driver);
     }
 
 

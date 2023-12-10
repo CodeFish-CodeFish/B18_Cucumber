@@ -4,9 +4,13 @@ import com.smart_bear.pages.SmartBearLogin;
 import com.smart_bear.pages.SmartBearOrder;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.it.Ma;
+import io.cucumber.java.sl.In;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import utils.DriverHelper;
+
+import java.util.Map;
 
 public class SmartBearStepDef {
 
@@ -48,6 +52,46 @@ public class SmartBearStepDef {
     @Then("user finally clicks on process button")
     public void user_finally_clicks_on_process_button() {
         order.clickOnProcessBtn();
+    }
+
+    @When("user is on login page and enters username and password as clicks on login")
+    public void user_is_on_login_page_and_enters_username_and_password_as_clicks_on_login(io.cucumber.datatable.DataTable dataTable) {
+        Map<String, String> userNamePassword = dataTable.asMap();
+        login.login(userNamePassword.get("username"), userNamePassword.get("password"));
+    }
+    @Then("user chooses product and specifies quantity")
+    public void user_chooses_product_and_specifies_quantity(io.cucumber.datatable.DataTable dataTable) {
+      Map<String, String> productQuantity = dataTable.asMap();
+      order.screenAndQuantity(productQuantity.get("product"), productQuantity.get("quantity"));
+    }
+    @Then("user enters prices as five and discount as twenty")
+    public void user_enters_prices_as_five_and_discount_as_twenty(io.cucumber.datatable.DataTable dataTable) {
+        Map<String, String> priceDiscount = dataTable.asMap();
+        order.priceAndDiscount(Integer.parseInt(priceDiscount.get("price")), Integer.parseInt(priceDiscount.get("discount")));
+    }
+    @Then("user enters total as")
+    public void user_enters_total_as(io.cucumber.datatable.DataTable dataTable) {
+      Map<String, String> total = dataTable.asMap();
+      order.setTotal(total.get("total"));
+    }
+    @Then("user enters name and address as")
+    public void user_enters_name_and_address_as(io.cucumber.datatable.DataTable dataTable) {
+       Map<String, String> nameAddress = dataTable.asMap();
+       order.nameAndAddress(nameAddress.get("name"), nameAddress.get("address"));
+    }
+    @Then("user enters state city and zipcode as follows")
+    public void user_enters_state_city_and_zipcode_as_follows(io.cucumber.datatable.DataTable dataTable) {
+      Map<String, String> stateCityZipCode = dataTable.asMap();
+      order.setCityStateZip(stateCityZipCode.get("state"), stateCityZipCode.get("city"), stateCityZipCode.get("zipCode"));
+    }
+    @Then("user clicks on visa radio and eners cc followed by its expiration date as")
+    public void user_clicks_on_visa_radio_and_eners_cc_followed_by_its_expiration_date_as(io.cucumber.datatable.DataTable dataTable) {
+      Map<String, String> ccAndExpiration = dataTable.asMap();
+      order.ccAndExpiration(ccAndExpiration.get("cc"), ccAndExpiration.get("expiration"));
+    }
+    @Then("user clicks on process button")
+    public void user_clicks_on_process_button() {
+       order.clickOnProcessBtn();
     }
 
 

@@ -64,8 +64,8 @@ public class SortPage {
         System.out.println(map.size());
     }
 
-    public void clickOnNameColumn(){
-        BrowserUtils.clickOnElement(nameColumn);
+    public void clickOnNameColumn(WebDriver driver){
+        BrowserUtils.clickOnElement(driver,nameColumn);
     }
 
     public void checkAscendingOrder(){
@@ -87,9 +87,9 @@ public class SortPage {
     }
 
 
-    public void checkDescendingOrder(){
+    public void checkDescendingOrder(WebDriver driver){
 
-        clickOnNameColumn();
+        clickOnNameColumn(driver);
 
         List<Character> actualLetters = new ArrayList<>();
         List<Character> expectedLetters = new ArrayList<>();

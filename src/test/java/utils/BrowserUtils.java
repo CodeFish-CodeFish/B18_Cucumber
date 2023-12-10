@@ -4,10 +4,13 @@ import io.cucumber.java.Scenario;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -45,8 +48,22 @@ public class BrowserUtils {
         return options;
     }
 
-    public static String getText(WebElement element) {
+    public static void getURL(WebDriver driver, String url) {
 
+        driver.get(ConfigReader.readProperty(url));
+        driver.manage().deleteAllCookies();
+    }
+
+    public static String getText(WebDriver driver, WebElement element) {
+        // this method will wait for 10 seconds until text/element is present in the dom. If it does not show up
+        // we will get timeOut exception
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.and(ExpectedConditions.visibilityOf(element),
+                ExpectedConditions.textToBePresentInElement(element, "")));
+        return element.getText().trim();
+    }
+
+    public static String getText(WebElement element) {
+// this method does not wait for webElement
         return element.getText().trim();
 
     }
@@ -85,7 +102,8 @@ public class BrowserUtils {
 
     }
 
-    public static void clickOnElement(WebElement element) {
+    public static void clickOnElement(WebDriver driver, WebElement element) {
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
 
@@ -95,11 +113,13 @@ public class BrowserUtils {
     }
 
     public static void clickWithJS(WebDriver driver, WebElement element) {
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(element));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click()", element);
     }
 
     public static void scrollWithJS(WebDriver driver, WebElement element) {
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(element));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true)", element);
     }
@@ -118,7 +138,7 @@ public class BrowserUtils {
     }
 
     public static void acceptAlert(WebDriver driver) {
-
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
         alert.accept();
 
@@ -143,6 +163,7 @@ public class BrowserUtils {
 
     // These methods below are overloaded
     public static void switchToIframe(WebDriver driver, String nameOrId) {
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(nameOrId));
         driver.switchTo().frame(nameOrId);
     }
 
@@ -153,7 +174,7 @@ public class BrowserUtils {
 
     public static void switchToParentFrameOrDefault(WebDriver driver, String frame) {
 
-        switch (frame){
+        switch (frame) {
             case "parent":
                 driver.switchTo().parentFrame();
                 break;
@@ -168,8 +189,8 @@ public class BrowserUtils {
 
     }
 
-    public static void scrollWithPoint(WebDriver driver, WebElement element){
-
+    public static void scrollWithPoint(WebDriver driver, WebElement element) {
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.invisibilityOf(element));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         Point point = element.getLocation();
         int xCoordinate = point.getX();
@@ -179,27 +200,27 @@ public class BrowserUtils {
 
     }
 
-    public static void scrollByAmount(WebDriver driver, int x, int y){
+    public static void scrollByAmount(WebDriver driver, int x, int y) {
 
         Actions actions = new Actions(driver);
         actions.scrollByAmount(x, y).build().perform();
 
     }
 
-    public static void dragAndDrop(WebDriver driver, WebElement source, WebElement target){
+    public static void dragAndDrop(WebDriver driver, WebElement source, WebElement target) {
 
         Actions actions = new Actions(driver);
         actions.dragAndDrop(source, target).build().perform();
 
     }
 
-    public static void clickWithActions(WebDriver driver, WebElement element){
+    public static void clickWithActions(WebDriver driver, WebElement element) {
 
         Actions actions = new Actions(driver);
         actions.click(element).build().perform();
     }
 
-    public static void hoverOver(WebDriver driver, WebElement target){
+    public static void hoverOver(WebDriver driver, WebElement target) {
 
         Actions actions = new Actions(driver);
 
@@ -207,16 +228,16 @@ public class BrowserUtils {
 
     }
 
-    public static void takeScreenshotCucumber(Scenario scenario, WebDriver driver){
+    public static void takeScreenshotCucumber(Scenario scenario, WebDriver driver) {
 
         Date currentDate = new Date();
         String screenshotFileName = currentDate.toString().replace(":", "-");
-        if (scenario.isFailed()){
-            File screenShotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        if (scenario.isFailed()) {
+            File screenShotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
             try {
                 FileUtils.copyFile(screenShotFile, new File("src/test/java/screenshots/" + screenshotFileName + ".png"));
-            }catch (IOException e){
+            } catch (IOException e) {
                 throw new RuntimeException(e);
             }
 
