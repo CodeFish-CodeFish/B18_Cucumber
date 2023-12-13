@@ -15,10 +15,19 @@ public class MainPageAuto {
     @FindBy(xpath = "//a[.=' Signup / Login']")
     WebElement signUpBtn;
 
+    @FindBy(xpath = "//a[.=' Contact us']")
+    WebElement contactUs;
+
+
+
     public void clickOnSignUpLink(){
 
         signUpBtn.click();
 
+    }
+
+    public void clickOnContactUs(){
+        contactUs.click();
     }
 
 

@@ -134,7 +134,6 @@ public class BrowserUtils {
                 break;
             }
         }
-
     }
 
     public static void acceptAlert(WebDriver driver) {
