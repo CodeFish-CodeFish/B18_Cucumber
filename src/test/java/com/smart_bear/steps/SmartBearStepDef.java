@@ -7,7 +7,7 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.it.Ma;
 import io.cucumber.java.sl.In;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import utils.DriverHelper;
 
 import java.util.Map;
